@@ -45,7 +45,6 @@ namespace MyFirstConsoleApplication
             // exiting
             Console.WriteLine("Press any key to continue.");
             Console.ReadLine();
-            Console.WriteLine();
         }
 
     }
