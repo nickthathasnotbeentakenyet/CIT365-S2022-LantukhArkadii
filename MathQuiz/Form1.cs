@@ -130,6 +130,11 @@ namespace MathQuiz
                 MessageBox.Show("You got all the answers right!",
                                 "Congratulations!");
                 startButton.Enabled = true;
+                // set back-color to white and play win sound
+                timeLabel.BackColor = Color.White;
+                System.Media.SoundPlayer player =
+                        new System.Media.SoundPlayer(@"C:\Users\warning\Documents\BYU-I\CIT 365 (.NET)\MathQuiz\sounds\win.wav");
+                player.Play();
             }
             else if (timeLeft > 0)
             {
@@ -139,12 +144,21 @@ namespace MathQuiz
                 // Time Left label.
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
+                // change back-color to red and play sound when time is less than 5 sec
+                if (timeLeft <= 5) 
+                { 
+                    timeLabel.BackColor = Color.Red;
+                }
             }
             else
             {
                 // If the user ran out of time, stop the timer, show
                 // a MessageBox, and fill in the answers.
                 timer1.Stop();
+                // play sound if user fails
+                System.Media.SoundPlayer player =
+                        new System.Media.SoundPlayer(@"C:\Users\warning\Documents\BYU-I\CIT 365 (.NET)\MathQuiz\sounds\dead.wav");
+                player.Play();
                 timeLabel.Text = "Time's up!";
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
@@ -152,6 +166,8 @@ namespace MathQuiz
                 product.Value = multiplicand * multiplier;
                 quotient.Value = dividend / divisor;
                 startButton.Enabled = true;
+                // set back-color to white
+                timeLabel.BackColor = Color.White;
             }
         }
 
@@ -164,6 +180,17 @@ namespace MathQuiz
             {
                 int lengthOfAnswer = answerBox.Value.ToString().Length;
                 answerBox.Select(0, lengthOfAnswer);
+
+                // Play sound if the entered answer is correct
+                if ((addend1 + addend2 == sum.Value)
+                || (minuend - subtrahend == difference.Value)
+                || (multiplicand * multiplier == product.Value)
+                || (dividend / divisor == quotient.Value))
+                {
+                    System.Media.SoundPlayer player =
+                        new System.Media.SoundPlayer(@"C:\Users\warning\Documents\BYU-I\CIT 365 (.NET)\MathQuiz\sounds\mario_success.wav");
+                    player.Play();
+                }
             }
         }
     }
