@@ -12,7 +12,7 @@ namespace MathQuiz
 {
     public partial class Form1 : Form
     {
-       
+                
         // Create a Random object called randomizer 
         // to generate random numbers.
         Random randomizer = new Random();
@@ -41,11 +41,11 @@ namespace MathQuiz
         // remaining time.
         int timeLeft;
 
-
         /// <summary>
         /// Start the quiz by filling in all of the problems
         /// and starting the timer.
         /// </summary>
+        
         public void StartTheQuiz()
         {
             // Fill in the addition problem.
@@ -86,11 +86,12 @@ namespace MathQuiz
             dividedLeftLabel.Text = dividend.ToString();
             dividedRightLabel.Text = divisor.ToString();
             quotient.Value = 0;
-
+            
             // Start the timer.
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
             timer1.Start();
+            
         }
 
         /// <summary>
@@ -111,6 +112,8 @@ namespace MathQuiz
         public Form1()
         {
             InitializeComponent();
+            showDate();
+
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -126,15 +129,15 @@ namespace MathQuiz
                 // If CheckTheAnswer() returns true, then the user 
                 // got the answer right. Stop the timer  
                 // and show a MessageBox.
-                timer1.Stop();
-                MessageBox.Show("You got all the answers right!",
-                                "Congratulations!");
-                startButton.Enabled = true;
                 // set back-color to white and play win sound
                 timeLabel.BackColor = Color.White;
                 System.Media.SoundPlayer player =
                         new System.Media.SoundPlayer(@"C:\Users\warning\Documents\BYU-I\CIT 365 (.NET)\MathQuiz\sounds\win.wav");
                 player.Play();
+                timer1.Stop();
+                MessageBox.Show("You got all the answers right!",
+                                "Congratulations!");
+                startButton.Enabled = true;
             }
             else if (timeLeft > 0)
             {
@@ -144,10 +147,13 @@ namespace MathQuiz
                 // Time Left label.
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
-                // change back-color to red and play sound when time is less than 5 sec
-                if (timeLeft <= 5) 
+                // change back-color to red and play sound when the counter reaches 5 sec
+                if (timeLeft == 5) 
                 { 
-                    timeLabel.BackColor = Color.Red;
+                    timeLabel.BackColor = Color.Coral;
+                    System.Media.SoundPlayer player =
+                        new System.Media.SoundPlayer(@"C:\Users\warning\Documents\BYU-I\CIT 365 (.NET)\MathQuiz\sounds\time_up.wav");
+                    player.Play();
                 }
             }
             else
@@ -193,5 +199,14 @@ namespace MathQuiz
                 }
             }
         }
+        private void showDate()
+        {
+            // show current date
+            // For some reason VS doesn't want to show properties. Had to add them here...
+            dateLabel.Text = DateTime.Now.Date.ToString("dd MMMM yyyy");
+            dateLabel.Location = new Point(20,9);
+            dateLabel.ForeColor = Color.Teal ;
+            dateLabel.Font = new Font("Roboto Mono Medium for Powerlin", 9);
+    }
     }
 }

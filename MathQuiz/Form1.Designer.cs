@@ -54,6 +54,7 @@
             this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -62,36 +63,42 @@
             // 
             // timeLabel
             // 
-            this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.timeLabel.Font = new System.Drawing.Font("Roboto Mono Medium for Powerlin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeLabel.Location = new System.Drawing.Point(270, 9);
+            this.timeLabel.ForeColor = System.Drawing.Color.Teal;
+            this.timeLabel.Location = new System.Drawing.Point(270, 33);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(200, 30);
             this.timeLabel.TabIndex = 0;
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Mono Medium for Powerlin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(89, 6);
+            this.label1.Font = new System.Drawing.Font("Roboto Mono Medium for Powerlin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(340, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 33);
+            this.label1.Size = new System.Drawing.Size(118, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Time Left:";
+            this.label1.Text = "Time Left";
             // 
             // plusLeftLabel
             // 
-            this.plusLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.plusLeftLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.plusLeftLabel.ForeColor = System.Drawing.Color.Crimson;
             this.plusLeftLabel.Location = new System.Drawing.Point(50, 75);
             this.plusLeftLabel.Name = "plusLeftLabel";
-            this.plusLeftLabel.Size = new System.Drawing.Size(60, 50);
+            this.plusLeftLabel.Size = new System.Drawing.Size(80, 50);
             this.plusLeftLabel.TabIndex = 2;
             this.plusLeftLabel.Text = "?";
-            this.plusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.plusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(116, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 50);
@@ -101,18 +108,20 @@
             // 
             // plusRightLabel
             // 
-            this.plusRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.plusRightLabel.Location = new System.Drawing.Point(182, 75);
+            this.plusRightLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.plusRightLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.plusRightLabel.Location = new System.Drawing.Point(200, 75);
             this.plusRightLabel.Name = "plusRightLabel";
-            this.plusRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.plusRightLabel.Size = new System.Drawing.Size(80, 50);
             this.plusRightLabel.TabIndex = 4;
             this.plusRightLabel.Text = "?";
-            this.plusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.plusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(248, 73);
+            this.label4.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(280, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 50);
             this.label4.TabIndex = 5;
@@ -121,26 +130,30 @@
             // 
             // sum
             // 
-            this.sum.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sum.Location = new System.Drawing.Point(314, 79);
+            this.sum.BackColor = System.Drawing.SystemColors.Window;
+            this.sum.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sum.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.sum.Location = new System.Drawing.Point(370, 79);
             this.sum.Name = "sum";
-            this.sum.Size = new System.Drawing.Size(100, 42);
+            this.sum.Size = new System.Drawing.Size(100, 44);
             this.sum.TabIndex = 1;
             this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // difference
             // 
-            this.difference.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.difference.Location = new System.Drawing.Point(314, 140);
+            this.difference.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.difference.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.difference.Location = new System.Drawing.Point(370, 140);
             this.difference.Name = "difference";
-            this.difference.Size = new System.Drawing.Size(100, 42);
+            this.difference.Size = new System.Drawing.Size(100, 44);
             this.difference.TabIndex = 2;
             this.difference.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(248, 134);
+            this.label3.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(280, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 50);
             this.label3.TabIndex = 10;
@@ -149,18 +162,20 @@
             // 
             // minusRightLabel
             // 
-            this.minusRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.minusRightLabel.Location = new System.Drawing.Point(182, 134);
+            this.minusRightLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minusRightLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.minusRightLabel.Location = new System.Drawing.Point(200, 130);
             this.minusRightLabel.Name = "minusRightLabel";
-            this.minusRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.minusRightLabel.Size = new System.Drawing.Size(80, 50);
             this.minusRightLabel.TabIndex = 9;
             this.minusRightLabel.Text = "?";
-            this.minusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.minusRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(116, 134);
+            this.label6.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(116, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 50);
             this.label6.TabIndex = 8;
@@ -169,27 +184,30 @@
             // 
             // minusLeftLabel
             // 
-            this.minusLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minusLeftLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.minusLeftLabel.ForeColor = System.Drawing.Color.Crimson;
             this.minusLeftLabel.Location = new System.Drawing.Point(50, 130);
             this.minusLeftLabel.Name = "minusLeftLabel";
-            this.minusLeftLabel.Size = new System.Drawing.Size(60, 50);
+            this.minusLeftLabel.Size = new System.Drawing.Size(80, 50);
             this.minusLeftLabel.TabIndex = 7;
             this.minusLeftLabel.Text = "?";
-            this.minusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.minusLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // product
             // 
-            this.product.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.product.Location = new System.Drawing.Point(314, 200);
+            this.product.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.product.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.product.Location = new System.Drawing.Point(370, 200);
             this.product.Name = "product";
-            this.product.Size = new System.Drawing.Size(100, 42);
+            this.product.Size = new System.Drawing.Size(100, 44);
             this.product.TabIndex = 3;
             this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(248, 194);
+            this.label5.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(280, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 50);
             this.label5.TabIndex = 15;
@@ -198,18 +216,20 @@
             // 
             // timesRightLabel
             // 
-            this.timesRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timesRightLabel.Location = new System.Drawing.Point(182, 194);
+            this.timesRightLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timesRightLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.timesRightLabel.Location = new System.Drawing.Point(200, 190);
             this.timesRightLabel.Name = "timesRightLabel";
-            this.timesRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.timesRightLabel.Size = new System.Drawing.Size(80, 50);
             this.timesRightLabel.TabIndex = 14;
             this.timesRightLabel.Text = "?";
-            this.timesRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timesRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(116, 194);
+            this.label8.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label8.Location = new System.Drawing.Point(116, 190);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 50);
             this.label8.TabIndex = 13;
@@ -218,27 +238,30 @@
             // 
             // timesLeftLabel
             // 
-            this.timesLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timesLeftLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timesLeftLabel.ForeColor = System.Drawing.Color.Crimson;
             this.timesLeftLabel.Location = new System.Drawing.Point(50, 190);
             this.timesLeftLabel.Name = "timesLeftLabel";
-            this.timesLeftLabel.Size = new System.Drawing.Size(60, 50);
+            this.timesLeftLabel.Size = new System.Drawing.Size(80, 50);
             this.timesLeftLabel.TabIndex = 12;
             this.timesLeftLabel.Text = "?";
-            this.timesLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timesLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // quotient
             // 
-            this.quotient.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.quotient.Location = new System.Drawing.Point(314, 259);
+            this.quotient.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.quotient.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.quotient.Location = new System.Drawing.Point(370, 259);
             this.quotient.Name = "quotient";
-            this.quotient.Size = new System.Drawing.Size(100, 42);
+            this.quotient.Size = new System.Drawing.Size(100, 44);
             this.quotient.TabIndex = 4;
             this.quotient.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(248, 253);
+            this.label10.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(280, 249);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 50);
             this.label10.TabIndex = 20;
@@ -247,18 +270,20 @@
             // 
             // dividedRightLabel
             // 
-            this.dividedRightLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dividedRightLabel.Location = new System.Drawing.Point(182, 253);
+            this.dividedRightLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dividedRightLabel.ForeColor = System.Drawing.Color.Crimson;
+            this.dividedRightLabel.Location = new System.Drawing.Point(200, 249);
             this.dividedRightLabel.Name = "dividedRightLabel";
-            this.dividedRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.dividedRightLabel.Size = new System.Drawing.Size(80, 50);
             this.dividedRightLabel.TabIndex = 19;
             this.dividedRightLabel.Text = "?";
-            this.dividedRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dividedRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(116, 253);
+            this.label12.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label12.Location = new System.Drawing.Point(116, 249);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 50);
             this.label12.TabIndex = 18;
@@ -267,24 +292,30 @@
             // 
             // dividedLeftLabel
             // 
-            this.dividedLeftLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dividedLeftLabel.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dividedLeftLabel.ForeColor = System.Drawing.Color.Crimson;
             this.dividedLeftLabel.Location = new System.Drawing.Point(50, 249);
             this.dividedLeftLabel.Name = "dividedLeftLabel";
-            this.dividedLeftLabel.Size = new System.Drawing.Size(60, 50);
+            this.dividedLeftLabel.Size = new System.Drawing.Size(80, 50);
             this.dividedLeftLabel.TabIndex = 17;
             this.dividedLeftLabel.Text = "?";
-            this.dividedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dividedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // startButton
             // 
             this.startButton.AutoSize = true;
-            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startButton.Location = new System.Drawing.Point(147, 306);
+            this.startButton.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.startButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startButton.ForeColor = System.Drawing.Color.White;
+            this.startButton.Location = new System.Drawing.Point(0, 304);
+            this.startButton.Margin = new System.Windows.Forms.Padding(0);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(161, 39);
+            this.startButton.Padding = new System.Windows.Forms.Padding(3);
+            this.startButton.Size = new System.Drawing.Size(484, 50);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start the quiz";
-            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // timer1
@@ -292,11 +323,22 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Location = new System.Drawing.Point(0, 0);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(0, 16);
+            this.dateLabel.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(482, 353);
+            this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label10);
@@ -320,11 +362,12 @@
             this.Controls.Add(this.plusLeftLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.timeLabel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Math Quiz";
+            this.Text = "Arkadii Lantukh | Math Quiz";
             ((System.ComponentModel.ISupportInitialize)(this.sum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).EndInit();
@@ -360,6 +403,7 @@
         private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label dateLabel;
     }
 }
 

@@ -83,6 +83,7 @@
     <Content Include="icons\calculator.ico" />
     <Content Include="sounds\dead.wav" />
     <Content Include="sounds\mario_success.wav" />
+    <Content Include="sounds\time_up.wav" />
     <Content Include="sounds\win.wav" />
   </ItemGroup>
   <ItemGroup />
