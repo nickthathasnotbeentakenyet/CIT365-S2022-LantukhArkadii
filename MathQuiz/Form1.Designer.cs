@@ -133,7 +133,7 @@
             this.sum.BackColor = System.Drawing.SystemColors.Window;
             this.sum.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sum.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.sum.Location = new System.Drawing.Point(370, 79);
+            this.sum.Location = new System.Drawing.Point(370, 75);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 44);
             this.sum.TabIndex = 1;
@@ -143,7 +143,7 @@
             // 
             this.difference.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.difference.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.difference.Location = new System.Drawing.Point(370, 140);
+            this.difference.Location = new System.Drawing.Point(370, 130);
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(100, 44);
             this.difference.TabIndex = 2;
@@ -197,7 +197,7 @@
             // 
             this.product.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.product.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.product.Location = new System.Drawing.Point(370, 200);
+            this.product.Location = new System.Drawing.Point(370, 190);
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(100, 44);
             this.product.TabIndex = 3;
@@ -251,7 +251,7 @@
             // 
             this.quotient.Font = new System.Drawing.Font("Roboto Mono for Powerline", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.quotient.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.quotient.Location = new System.Drawing.Point(370, 259);
+            this.quotient.Location = new System.Drawing.Point(370, 249);
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 44);
             this.quotient.TabIndex = 4;
@@ -304,7 +304,7 @@
             // startButton
             // 
             this.startButton.AutoSize = true;
-            this.startButton.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.startButton.BackColor = System.Drawing.Color.Teal;
             this.startButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.startButton.ForeColor = System.Drawing.Color.White;
@@ -335,7 +335,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(482, 353);
             this.Controls.Add(this.dateLabel);
